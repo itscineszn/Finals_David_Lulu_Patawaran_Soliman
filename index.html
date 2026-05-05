@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Global Recipe Finder</div>
+        <ul class="nav-links">
+            <li><a href="#" id="homeLink">Home</a></li>
+            <li class="dropdown">
+                <a href="#" id="categoriesLink">Categories ▾</a>
+                <div id="categoryDropdown" class="dropdown-content"></div>
+            </li>
+            <li><a href="#" id="countriesLink">Countries</a></li>
+            <li><a href="#" id="randomLink">Surprise Me!</a></li>
+            <li><a href="#" id="favoritesLink">Favorites</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Hungry?</h1>
+                <p class="hero-subtitle">Explore thousands of recipes from all over the world with just one click.</p>
+                
+                <div class="search-box">
+                    <input type="text" id="userQuery" placeholder="What do you want to cook?" class="search-input">
+                    <button id="searchBtn" class="search-button">SEARCH</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="filterOptions" class="filter-container"></div>
+
+        <div id="loadingStatus" class="status-msg">Fetching delicious recipes...</div>
+        <div id="errorMessage" class="status-msg error">No recipes found.</div>
+
+        <div id="contentWrapper">
+            <div id="featuredSection">
+                <h2 id="mainSectionTitle" class="section-title">Today's Featured Recipes</h2>
+            </div>
+            <div id="recipeContainer" class="recipe-grid"></div>
+        </div>
+    </div>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

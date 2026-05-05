@@ -1,0 +1,455 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* LAYOUT & CONTAINERS */
+.container {
+    width: 100%;
+    margin-top: 70px;
+    padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: rgba(139, 0, 0, 0.95);
+    backdrop-filter: blur(5px);
+    color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcccb;
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    top: 100%;
+    right: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #8b0000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* HUNGRY TITLE */
+.hero-section {
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+/* SEARCH BOX */
+.search-box {
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+.search-input {
+    width: 450px;
+    height: 60px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.search-button {
+    height: 60px;
+    padding: 0 40px;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    background-color: #8b0000;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-button:hover {
+    background-color: #a50000;
+}
+
+#featuredSection {
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* COUNTRY LIST */
+.alphabetical-container {
+    padding: 60px 8%;
+    background-color: #f9f9f9;
+}
+
+.browse-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 40px;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.letter-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eeeeee;
+    border-top: 5px solid #8b0000;
+    transition: transform 0.3s ease;
+}
+
+.letter-header {
+    font-size: 2rem;
+    color: #8b0000;
+    margin-bottom: 20px;
+    border-left: 6px solid #8b0000;
+    padding-left: 15px;
+}
+
+.country-pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.country-pill {
+    padding: 10px 22px;
+    background-color: transparent;
+    border: 1.5px solid #8b0000;
+    color: #8b0000;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.country-pill:hover {
+    background-color: #8b0000;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2);
+}
+
+/* FAVORITE BUTTONS*/
+.fav-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #8b0000;
+    color: #8b0000;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fav-btn:hover {
+    background: #f7c1c1;
+    border-color:#f7c1c1;
+}
+
+.fav-btn.remove {
+    border-color: #333;
+    color: #333;
+}
+
+.fav-btn.remove:hover {
+    background: #333;
+    color: white;
+}
+
+/* RECIPE GRID & CARDS */
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 60px 0 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 5% 50px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(139, 0, 0, 0.15);
+}
+
+.card-img-container {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.recipe-card:hover .card-img-container img {
+    transform: scale(1.1);
+}
+
+.recipe-info {
+    padding: 20px;
+}
+
+.recipe-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 30px auto;
+    width: 60%;
+    max-height: 90vh;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+    z-index: 10;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.modal-header img {
+    width: 100%; height: 300px;
+    object-fit: cover; border-radius: 10px;
+}
+
+.modal-info {
+    padding: 40px;
+}
+
+.modal-title {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.modal-info ul { padding-left: 20px; margin-bottom: 20px; }
+.modal-info p { line-height: 1.8; text-align: justify; }
+
+.modal-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-info h3 {
+    margin: 30px 0 15px;
+    color: #8b0000;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.instructions-bullets {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.instructions-bullets li {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+    text-align: left;
+}
+
+.ingredients-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.video-btn {
+    margin-top: 40px;
+    padding: 18px;
+    width: 100%;
+    background: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.video-btn:hover {
+    background: #cc0000;
+    transform: scale(1.02);
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tags span {
+    background: #fff0f0;
+    color: #8b0000;
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.view-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.view-btn:hover {
+    background-color: #6a0000;
+}
+
+/* STATUS MESSAGES */
+.status-msg {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.error { color: #8b0000; }
